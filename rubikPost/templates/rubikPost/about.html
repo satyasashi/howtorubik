@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}HowToRubiks{% endblock %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/customStyles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/styles.css' %}">
+	<script src="{% static 'rubikPost/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'rubikPost/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+	<div class="container-fluid mainDiv">
+		{% include 'snippets/nav.html' %}
+
+		<div class="container">
+			<div class="row">
+					<h1 class="page-header">About Me</h1>
+					<div class="col-md-3 imgDiv">
+						
+						<img src="{% static 'rubikPost/img/sashi.jpg' %}" height="200px" width="180px" class="img-thumbnail">
+					</div>
+					<div class="col-md-9">
+						<p>I am <b>Sashikanth</b> completed my <i>BSc</i> in <i>"Computers Science"</i> and I was always passionate about the Technology and Computers that are rapidly changing the way we live.</p>
+
+						<p>With that passion, I started learning how to code in my college days. I learned that programming is the way people at Big technology companies making impact on world by making great tools and products for people to use.</p>
+
+						<p>I started with simple <i><u>HTML, CSS</u></i> and later got to know that these are not enough to make something great. <br>So, I was ready to make my hands dirty by starting with real <b>Programming and business logic</b>. I started with <i><u>JavaScript</u></i> and now I am using <i><b><u>PYTHON / DJANGO</u></b></i> as my Backend Programming Language.
+						</p>
+
+						<p>I used <b>Python/Django, Bootstrap </b> to build this simple blogging site.</p>
+					</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8">
+					<h4>Follow me on:</h4>
+					<div class="aboutFollow">
+						
+						<a href="https://www.github.com/satyasashi" target="_blank"><img src="{% static 'rubikPost/img/github.png' %}" height="50px" width="50px"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

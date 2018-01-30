@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Basic 3x3 - {{block.super}}
+{% endblock %}
+
+{% block banner %}
+
+{% endblock %}
+
+{% block content %}
+	<h1 class="page-header" style="text-align: center;">Advance 3x3 Cubing</h1>
+		<div class="homePageContent">
+			<!-- POST TITLE -->
+			<div class="comingSoon">
+				<h3>Oops! This page is still under construction...</h3>
+			</div>
+
+		</div>
+{% endblock %}
+
+{% block tags %}
+	{% for tag in tags %}
+		<span class="glyphicon glyphicon-tags">{{tag.name}}</span>
+	{% endfor %}
+{% endblock %}

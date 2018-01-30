@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{post|title}} - {{block.super}}
+{% endblock %}
+
+{% block banner %}
+
+{% endblock %}
+
+{% block content %}
+	<div class="homePageContent">
+		<p><<< <a href="{% url 'post_list' %}">Go Back</a></p>
+		{% if post %}
+		<!-- POST TITLE -->
+		<h1 class="page-header">{{post.title}}</h1>
+
+		<!-- TIME AND PUBLISH -->
+			<i class="bg-info timestamp">
+				<span class="glyphicon glyphicon-time"> Published: </span>
+				<b>{{post.pub_date}}</b>, By: <span class="glyphicon glyphicon-user"></span> <b>{{post.author.name|capfirst}}</b></i>
+		<br>
+		<p class="postContent">{{post.content|safe|linebreaks}}</p>
+		{% else %}
+		<h2 class="bg-danger">Sorry Post was temporarily unavailabe or deleted</h2>
+		{% endif %}
+	</div>
+
+{% endblock %}
+
+{% block tags %}
+	{% for tag in tags %}
+		<span class="glyphicon glyphicon-tags">{{tag.name}}</span>
+	{% endfor %}
+{% endblock %}

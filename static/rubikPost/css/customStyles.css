@@ -1,0 +1,98 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f7f8f9;
+}
+
+.mainDiv {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	border-radius: 0px;
+	margin-bottom: 0px;
+	/*background-color: #4d194d;*/
+}
+
+.imageBanner {
+	margin-top: 0px;
+}
+
+.jumbotron {
+	background-image: url('../img/cube.jpg');
+	color: #ffffff;
+	font-family: sans-serif, serif;
+	height: 400px;
+	border-bottom: 1px solid #000;
+	/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.jumbotron h3 {
+	display: table;
+	float: right;
+	padding: 4px;
+	border-radius: 2px;
+	background-color: rgba(18, 19, 20, 0.5)
+}
+
+.textRed {
+	color: #d11919;
+}
+
+.textBlue {
+	color: #3385EB;
+}
+
+.textGreen {
+	color: #019961;
+}
+
+.textYellow {
+	color: #F2D001;
+}
+
+.textWhite {
+	color: #ffffff;
+}
+
+.postContainer {
+	margin-top: 5px;
+	padding: 5px;
+	background-color: #ffffff;	
+}
+
+.homePageContentDiv {
+	border-right: 1px solid #e6e6e6;
+	border-radius: 2px;
+}
+
+.homePageContentDiv .homePageContent {
+	padding: 5px;
+}
+
+.homePageContentDiv .homePageContent .timestamp {
+	padding: 4px;
+}
+
+
+.postContainer .homePageContentDiv .homePageContent h1 a {
+	text-decoration: none;
+}
+
+.postContainer .homePageContentDiv .homePageContent .postContent {
+	font-family: 'Inconsolata', monospace;
+	padding: 4px;
+	font-size: 16px;
+}
+
+.postContainer .homePageContentDiv .homePageContent .historyImage {
+	float: left;
+	margin: 6px 10px 4px 4px;
+	border-radius: 2px;
+}

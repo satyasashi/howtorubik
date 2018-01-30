@@ -1,0 +1,21 @@
+<div class="col-md-3">
+	<div class="sideBoxes">
+		<h1 class="page-header">Quick Look</h1>
+		<div>
+			<div class="tagBox">
+				<P>TAGS:</P>
+				{% for tag in tags %}
+					<mark><a href="#"> {{tag.name}} </a></mark>&nbsp;
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="sideBoxCubingMethods">
+		<ul>
+			<li>Basic Cubing</li>
+			<li>Advanced Cubing</li>
+			<li>...</li>
+		</ul>
+	</div>
+</div>

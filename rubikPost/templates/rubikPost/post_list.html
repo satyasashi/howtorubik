@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+	{% for post in posts %}
+	
+		<div class="homePageContent">
+			<!-- POST TITLE -->
+			<h1>
+				<a href="{{post.get_absolute_url}}">{{post.title|capfirst}}</a>
+			</h1>
+
+	<!-- TIME AND PUBLISH -->
+		<i class="bg-info timestamp">
+		<span class="glyphicon glyphicon-time"></span> Published:
+		<b>{{post.pub_date}}</b>, By: <span class="glyphicon glyphicon-user"></span> <b>{{post.author.name|capfirst}}</b></i>
+
+		<p>{{post.content|safe|truncatewords_html:50}}</p>
+
+		{% if post %}
+			<a class="btn btn-primary" href="{{post.get_absolute_url}}">Read More</a>
+		{% endif %}
+
+
+		</div>
+		<br /><hr />
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block banner %}
+
+{% endblock %}
+
+{% block content %}
+	<div class="homePageContent">
+		<!-- POST TITLE -->
+		<div class="row">
+			<div class="col-md-9">
+				
+				<h1 class="page-header">Advanced Videos</h1>
+				<div class="comingSoon">
+				<h3>Oops! This page is still under construction...</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block tags %}
+	{% for tag in tags %}
+		<span class="glyphicon glyphicon-tags">{{tag.name}}</span>
+	{% endfor %}
+{% endblock %}

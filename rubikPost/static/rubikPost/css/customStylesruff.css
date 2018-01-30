@@ -1,0 +1,32 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+.mainDiv {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	border-radius: 0px;
+	margin: 0px;
+	/*background-color: #4d194d;*/
+}
+
+.jumbotron {
+	background-image: url('../img/cube.jpg');
+	color: #131a26;
+	font-family: 'Bree Serif', serif;
+	height: 400px;
+	/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

@@ -1,0 +1,37 @@
+<!-- NavBar- use .navbar, .navbar-default to get navbar, .container-fluid 
+	for navbar to occupy full width of container  -->
+<nav class="navbar navbar-inverse navbar-toggeleable">
+	<div class="container">
+		<!-- For logo -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		    </button>
+		    {% load static %}
+			<a href="{% url 'post_list' %}" class="navbar-brand" style="color:#ffffff">BCuber</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="{% url 'post_list' %}">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Start Cubing<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url 'basicCubing' %}">Basic 3x3</a></li>
+						<li><a href="{% url 'advancedCubing' %}">Advance 3x3</a></li>
+						<!-- <li><a href="">Basic 4x4</a></li>
+						<li><a href="">Advance 4x4</a></li> -->
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Video tutorials <span class="glyphicon glyphicon-facetime-video"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="{% url 'basicVideos' %}">Basic 3x3</a></li>
+						<li><a href="{% url 'advancedVideos' %}">Advance 3x3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</nav>

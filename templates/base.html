@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}HowToRubiks{% endblock %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+  	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/customStyles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'rubikPost/css/styles.css' %}">
+	<script src="{% static 'rubikPost/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'rubikPost/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+	<div class="container-fluid mainDiv">
+
+		{% include 'snippets/nav.html' %}
+
+		{% block banner %}
+		<div class="col-md-12 jumbotron jumbo" style="border-radius: 0px;">
+			<div class="text-right">
+				<h3>"<span class="textRed">If you are curious</span>, <span class="textBlue">you'll find cube around you..</span><br/>
+				<span class="textGreen">If you are determined</span>, <span class="textYellow">you'll solve it..</span>"<br>~<span class="textWhite">Erno Rubik</span></h3>
+			</div>
+		</div>
+		{% endblock %}
+
+		<!-- End of container-fluid -->
+	</div>
+	<div class="container postContainer">
+			<div class="row">
+				<div class="col-md-9 homePageContentDiv">
+
+				{% block content %}
+				{% endblock %}
+
+				<!-- End of col-9 -->
+				</div>
+
+				{% include "snippets/sideBox.html" %}
+				<!-- End of row -->
+			</div>
+			<!-- End of container -->
+	</div>
+
+</body>
+</html>
