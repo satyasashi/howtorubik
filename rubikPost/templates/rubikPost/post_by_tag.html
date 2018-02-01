@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{{block.super}}
+{% endblock %}
+
+{% block content %}
+	<div class="homePageContent">
+		<p><<< <a href="{% url 'post_list' %}">Go Back</a></p>
+
+
+		<h1>Posts having Tags: {{tag.name}}</h1>
+		{% for post in posts %}
+		<h1>
+			<a href="{{post.get_absolute_url}}">{{post.title|capfirst}}</a>
+		</h1>
+
+	<!-- TIME AND PUBLISH -->
+		<i class="bg-info timestamp">
+		<span class="glyphicon glyphicon-time"></span> Published:
+		<b>{{post.pub_date}}</b>, By: <span class="glyphicon glyphicon-user"></span> <b>{{post.author.name|capfirst}}</b></i>
+		<p></p>
+
+		{% if post %}
+			<a class="btn btn-primary" href="{{post.get_absolute_url}}">Read More</a>
+		{% endif %}
+
+
+		{% endfor %}
+	</div>
+{% endblock %}

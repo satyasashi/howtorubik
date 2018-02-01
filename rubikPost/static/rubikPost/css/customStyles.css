@@ -5,7 +5,7 @@ body {
 }
 
 .mainDiv {
-	width: 100%;
+	/*width: 100%;*/
 	margin: 0;
 	padding: 0;
 }
@@ -66,8 +66,8 @@ body {
 }
 
 .postContainer {
-	/*margin-top: 5px;*/
-	padding: 5px;
+	margin-top: 5px;
+	/*padding: 5px;*/
 	background-color: #ffffff;	
 }
 
@@ -110,8 +110,42 @@ body {
 	float: left;
 }
 
+.aboutContainer {
+	background-color: #ffffff;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+
 .comingSoon {
 	padding: 40px;
 	text-align: center;
 	color: #ff0000;
+}
+
+.page-footer {
+	background-color: #222222;
+	color: #ffffff;
+}
+
+.page-footer ul li {
+	list-style: none;
+}
+
+.page-footer a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.page-footer a:hover {
+	text-decoration: underline;
+}
+
+.page-footer .secondFootCol ul {
+	border-left: 3px solid #938c94;
+}
+
+.page-footer .footer-copyright {
+	text-align: center;
+	background-color: #323335;
 }

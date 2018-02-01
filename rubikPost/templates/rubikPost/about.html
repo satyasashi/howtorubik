@@ -18,7 +18,7 @@
 	<div class="container-fluid mainDiv">
 		{% include 'snippets/nav.html' %}
 
-		<div class="container">
+		<div class="container aboutContainer">
 			<div class="row">
 					<h1 class="page-header">About Me</h1>
 					<div class="col-md-3 imgDiv">
@@ -37,7 +37,7 @@
 					</div>
 			</div>
 
-			<div class="row">
+			<div class="row followDiv">
 				<div class="col-md-8">
 					<h4>Follow me on:</h4>
 					<div class="aboutFollow">
@@ -48,5 +48,8 @@
 			</div>
 		</div>
 	</div>
+
+	{% include "snippets/footer.html" %}
+
 </body>
 </html>

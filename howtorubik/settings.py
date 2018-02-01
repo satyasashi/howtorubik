@@ -26,7 +26,7 @@ SECRET_KEY = '5f(+7r2$srsa73asg=xub#mg+pg4&v5+t3uxv&2u_d2!h+7k=2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['howtorubik.herokuapp.com',]
+ALLOWED_HOSTS = ['localhost','howtorubik.herokuapp.com',]
 
 
 # Application definition
@@ -79,12 +79,14 @@ WSGI_APPLICATION = 'howtorubik.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rubikPost',                      
-        'USER': 'postgres',
-        'PASSWORD': 'password000',
-        'HOST': 'howtorubik.herokuapp.com',
-        'PORT': '8001',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'rubikPost',                      
+        # 'USER': 'postgres',
+        # 'PASSWORD': 'password000',
+        # 'HOST': 'localhost',
+        # 'PORT': '',
     }
 }
 

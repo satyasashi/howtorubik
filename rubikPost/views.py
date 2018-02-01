@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Author, Tag, Category, Post
 
 # Create your views here.
@@ -16,6 +16,15 @@ def post_detail(request, pk, post_slug):
 	tags = Tag.objects.all()
 	return render(request, 'rubikPost/post_detail.html', {'post': post, 'tags':tags,})
 
+def post_by_tag(request, tag_slug):
+	''' Shows the post by tags '''
+	tag = get_object_or_404(Tag, slug=tag_slug)
+	posts = get_list_or_404(Post, tags=tag)
+	context = {
+		'tag': tag,
+		'posts': posts
+	}
+	return render(request, 'blog/post_by_tag.html', context)
 
 def basicCubing(request):
 	posts = Post.objects.filter(category__name__icontains="basic")
