@@ -27,7 +27,7 @@ def post_by_tag(request, tag_slug):
 	return render(request, 'blog/post_by_tag.html', context)
 
 def basicCubing(request):
-	posts = Post.objects.filter(category__name__icontains="basic")
+	posts = Post.objects.filter(category__name__icontains="basic").order_by("id")
 	tags = Tag.objects.all()
 	return render(request, 'rubikPost/basic_three.html', {'posts':posts, 'tags':tags,})
 
