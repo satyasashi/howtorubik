@@ -66,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.middleware.common.BrokenLinkEmailsMiddleware',
             ],
         },
     },
@@ -154,3 +155,19 @@ CKEDITOR_CONFIGS = {
         'width': '100%',
     },
 }
+
+# EMAIL SETTINGS
+SERVER_EMAIL = 'howtorubik8@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD = 'howtorubik000'
+EMAIL_HOST_USER = SERVER_EMAIL
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+ADMINS = [
+    ('howtorubik8', 'howtorubik8@gmail.com'),
+]
+
+MANAGERS = ADMINS

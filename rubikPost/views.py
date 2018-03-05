@@ -1,5 +1,10 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404, redirect
 from .models import Author, Tag, Category, Post
+from django.contrib import messages # for Flash Messages
+from .forms import ContactForm
+from django.core.mail import mail_admins # Feedback form sending Emails
+
+
 
 # Create your views here.
 
@@ -51,3 +56,22 @@ def about(request):
 	''' Shows about me '''
 	return render(request, 'rubikPost/about.html')
 
+
+# Feedback form view
+def contact(request):
+	if request.method == "POST":
+		f = ContactForm(request.POST)
+
+		if f.is_valid():
+			name = f.cleaned_data['name']
+			sender = f.cleaned_data['email']
+			subject = "You have new Feedback from {}:{}".format(name, sender)
+			message = "Subject: {}\n\nMessage: {}".format(f.cleaned_data['subject'], f.cleaned_data['message'])
+			mail_admins(subject, message)
+
+			f.save()
+			messages.add_message(request, messages.INFO, "Feedback Submitted")
+			return redirect('contact')
+	else:
+		f = ContactForm()
+	return render(request, 'rubikPost/contact.html', {'form':f,})

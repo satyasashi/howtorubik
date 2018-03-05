@@ -28,7 +28,13 @@ class PostAdmin(admin.ModelAdmin):
 	readonly_fields = ('slug',)
 
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'subject','date',)
+    search_fields = ('name', 'email',)
+    date_hierarchy = 'date'
+
 admin.site.register(models.Author, AuthorAdmin)
 admin.site.register(models.Category, CategoryAdmin)
 admin.site.register(models.Tag, TagAdmin)
 admin.site.register(models.Post, PostAdmin)
+admin.site.register(models.Contact, ContactAdmin)
