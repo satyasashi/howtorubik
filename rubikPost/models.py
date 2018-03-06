@@ -42,7 +42,7 @@ class Tag(models.Model):
 		return self.name
 
 	def get_absolute_urL(self):
-		return reverse('post_by_tag', args=[self.id, self.slug])
+		return reverse('post_by_tag', args=[self.slug])
 
 
 class Post(models.Model):

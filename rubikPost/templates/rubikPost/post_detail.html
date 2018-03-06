@@ -10,7 +10,7 @@
 
 {% block content %}
 	<div class="homePageContent">
-		<p><<< <a href="{% url 'post_list' %}">Go Back</a></p>
+		<p><<< <a href="#" onclick="goback()">Go Back</a></p>
 		{% if post %}
 		<!-- POST TITLE -->
 		<h1 class="page-header">{{post.title}}</h1>
