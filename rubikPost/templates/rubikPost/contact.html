@@ -17,11 +17,14 @@
 
 			{{ form.non_field_errors }}
 			
+			{% if messages %}
 			{% for msg in messages %}
-				<div class="alert alert-success">
-					<strong>Success!</strong> Your Valuable Feedback Sent.
+				<div class="alert alert-success alert-dismissible">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>Success!</strong> Your Valuable Feedback Sent.
 				</div>
 			{% endfor %}
+			{% endif %}
 			
 		<form action="" method="post">
 			{% csrf_token %}
