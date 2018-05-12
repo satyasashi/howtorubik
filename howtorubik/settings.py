@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5f(+7r2$srsa73asg=xub#mg+pg4&v5+t3uxv&2u_d2!h+7k=2'
+SECRET_KEY = 'Your_security_key_goes_here'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','howtorubik.herokuapp.com',]
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -156,17 +156,17 @@ CKEDITOR_CONFIGS = {
 }
 
 # EMAIL SETTINGS
-SERVER_EMAIL = 'howtorubik8@gmail.com'
+SERVER_EMAIL = 'yourEmail@mail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'howtorubik0909'
+EMAIL_HOST_PASSWORD = 'Your_password'
 EMAIL_HOST_USER = SERVER_EMAIL
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 ADMINS = [
-    ('howtorubik8', 'howtorubik8@gmail.com'),
+    ('youremail', 'yourEmail@gmail.com'),
 ]
 
 MANAGERS = ADMINS
